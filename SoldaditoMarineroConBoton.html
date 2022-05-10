@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>paginaweb</title>
+
+    <style>
+
+
+        a:link {
+            color: rgb(9, 0, 128);
+        }
+
+
+        a:visited {
+            color: green;
+        }
+
+
+        a:hover {
+            color: red;
+        }
+
+
+        a:active {
+            color: yellow;
+        }
+
+        p {
+            font-size: 110%;
+            margin-bottom: 12px;
+        }
+
+        div {
+            margin-bottom: 36px;
+        }
+
+        body {
+            background-color: rgb(88, 88, 88);
+           
+        }
+
+        div::first-letter {
+            font-size: 200%;
+            font-weight: bold;
+            font-style: italic;
+            color: black
+        }
+
+        div:nth-of-type(2n) {
+            background-color: white
+        }
+
+        div:nth-of-type(2n+1) {
+            background-color: rgb(194, 194, 194)
+        }
+
+        div p:last-child:after {
+            content: ".....;";
+            color: black;
+            font-weight: bold;
+        }
+        /**/
+        .boton{
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+           
+        }
+        .boton:hover {background-color: #3e8e41}
+        .boton:active {
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(5px);
+}
+        .modalDialog {
+	        position: fixed;
+	        font-family: Arial, Helvetica, sans-serif;
+	        top: 0;
+	        right: 0;
+	        bottom: 0;
+	        left: 0;
+	        background: rgba(0,0,0,0.8);
+	        z-index: 99999;
+	        opacity:0;
+	        -webkit-transition: opacity 400ms ease-in;
+	        -moz-transition: opacity 400ms ease-in;
+	        transition: opacity 400ms ease-in;
+	        pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+    
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+    </style>
+</head>
+
+<body>
+
+    <p>Soladito Marinero</p>
+    <div>
+        <p>
+            Él camina despacito que las prisas no son buenas
+        </p>
+        <p>
+            En su brazo dobladita, con cuidado la chaqueta
+        </p>
+        <p>
+            Luego pasa por la calle dónde los chavales juegan
+        </p>
+        <p>
+            Él también quiso ser niño pero le pilló la guerra
+        </p>
+
+    </div>
+    <div>
+        <p>
+            Soldadito marinero conociste a una sirena
+        </p>
+        <p>
+            De esas que dicen te quiero si ven la cartera llena
+        </p>
+        <p>
+            Sin saber como ha venido te ha cogido la tormenta
+        </p>
+        <p>
+            Escogiste a la más guapa y a la menos buena
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Él quería cruzar los mares y olvidar a su sirena
+        </p>
+        <p>
+            La verdad, no fue difícil cuando conoció a Mariela
+        </p>
+        <p>
+            Que tenía los ojos verdes y un negocio entre las piernas
+        </p>
+        <p>
+            Hay que ver que puntería, no te arrimas a una buena
+        </p>
+    </div>
+    </div>
+
+    <div>
+        <p>
+            Soldadito marinero conociste a una sirena
+        </p>
+        <p>
+            De esas que dicen te quiero si ven la cartera llena
+        </p>
+        <p>
+            Sin saber como ha venido te ha cogido la tormenta
+        </p>
+        <p>
+            Escogiste a la más guapa y a la menos buena
+        </p>
+    </div>
+    <div>
+        <p>
+            Después de un invierno malo, una mala primavera
+
+        </p>
+        <p>
+            Dime por que estas buscando una lágrima en la arena
+        </p>
+        <p>
+            Después de un invierno malo
+        </p>
+
+    </div>
+    <a class="boton" href="#openModal">Mas Info</a>
+            
+            
+            
+
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Modal David</h2>
+                     <p>Autor:Fito y Fitipaldis</p>
+    <p><a href="https://www.letras.com/fito-fitipaldis/614056/">
+            https://www.letras.com/fito-fitipaldis/614056/</a></p>
+                </div>
+            </div>
+
+</body>
+
+</html>
